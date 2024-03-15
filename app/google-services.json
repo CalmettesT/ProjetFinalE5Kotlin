@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "622888132401",
+    "project_id": "projetfinalkotline5",
+    "storage_bucket": "projetfinalkotline5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622888132401:android:113c173721afcd9acb1a10",
+        "android_client_info": {
+          "package_name": "com.example.projetfinale5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrjFYi1gtVvY6AjemPLXwSlRh03dkAkT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
