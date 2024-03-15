@@ -100,11 +100,13 @@ fun NoteDetailScreen(notesViewModel: NotesViewModel, navController: NavHostContr
                             }
                         )
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.height(64.dp))
                     }
 
                     // Affichage des catégories
                     CategoriesSection(categories = currentNote.categories)
+
+                    Spacer(modifier = Modifier.height(48.dp))
 
                     // Boutons pour éditer et supprimer la note
                     EditAndDeleteButtons(noteId = noteId, navController = navController, notesViewModel = notesViewModel)
@@ -145,7 +147,7 @@ fun EditAndDeleteButtons(noteId: String, navController: NavHostController, notes
             },
             colors = ButtonDefaults.buttonColors(
                 containerColor = MaterialTheme.colorScheme.errorContainer,
-                contentColor = Color.White
+                contentColor = Color.Red
             ),
             modifier = Modifier.weight(1f)
         ) {
