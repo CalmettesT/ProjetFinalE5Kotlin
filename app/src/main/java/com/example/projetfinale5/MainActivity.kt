@@ -1,7 +1,6 @@
 package com.example.projetfinale5
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.biometric.BiometricPrompt
 import androidx.compose.foundation.layout.padding
@@ -49,7 +48,7 @@ fun AppNavigation() {
     // Fournit une instance de NotesViewModel pour accéder aux données de l'application.
     val notesViewModel: NotesViewModel = viewModel()
 
-    // Observe les modifications de l'entrée actuelle de la pile de retour pour obtenir la route actuelle.
+    // Observe les modifications de l'entrée actuelle de la pile de retour pour obtenir la route actuelle (maj auto).
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
 

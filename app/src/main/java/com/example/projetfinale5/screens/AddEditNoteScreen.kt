@@ -8,8 +8,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import androidx.lifecycle.viewModelScope
 import androidx.compose.material.icons.filled.Done
 import androidx.compose.material3.*
@@ -240,8 +238,8 @@ fun CategorySelection(
 
 @Composable
 fun ImageAndFileSection(
-    imageUri: String?, // URI de l'image actuellement sélectionnée, si disponible.
-    fileUri: String?, // URI du fichier actuellement sélectionné, si disponible.
+    imageUri: String?,
+    fileUri: String?,
     onImageUriChange: (String?) -> Unit, // Fonction appelée pour mettre à jour l'URI de l'image.
     onFileUriChange: (String?) -> Unit // Fonction appelée pour mettre à jour l'URI du fichier.
 ) {
@@ -275,7 +273,7 @@ fun ImageAndFileSection(
 
         Spacer(modifier = Modifier.width(16.dp))
 
-        Button(onClick = { filePickerLauncher.launch(arrayOf("application/pdf").toString()) }) {
+        Button(onClick = { filePickerLauncher.launch("application/pdf") }) {
             Text(if (fileUri == null) "Ajouter un fichier" else "Changer le fichier")
         }
     }
