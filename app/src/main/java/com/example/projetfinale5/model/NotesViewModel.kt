@@ -15,8 +15,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.*
 
-
-
 class NotesViewModel : ViewModel() {
     // _notes est un MutableStateFlow qui contiendra la liste des notes. Ce StateFlow permet de notifier les observateurs de toute modification de la liste des notes.
     private val _notes = MutableStateFlow<List<Note>>(emptyList())
@@ -93,7 +91,7 @@ class NotesViewModel : ViewModel() {
                 }
 
                 val updatedNote = note.apply {
-                    this.id = noteDocumentRef.id // S'assurer que l'ID est correct pour les nouvelles notes
+                    this.id = noteDocumentRef.id // S'assurer que l'ID est correct pour les nouvelles notes (apply execute code sur obj et le return)
                 }
                 // Enregistrement de la note dans Firestore.
                 noteDocumentRef.set(updatedNote).await()
